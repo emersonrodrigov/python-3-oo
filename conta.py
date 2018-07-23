@@ -16,9 +16,18 @@ class Conta:
     # aula 3
     def deposita(self, valor):
         print(f"Valor depositado {valor}")
-        self.saldo += valor
+        self.__saldo += valor
 
     # aula 3
     def saca(self, valor):
         print(f"Valor sacado {valor}")
-        self.saldo -= valor
+        self.__saldo -= valor
+
+    # aula 4 - Encapsulamento
+    def transfere(self, valor,  conta_destino):
+        self.saca(valor)
+        conta_destino.deposita(valor)
+
+    # Esse metodo deveria estar na classe de cliente e nao na cont
+    # def eh_inadimplente(self, cliente):
+    #     pass
