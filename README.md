@@ -26,3 +26,4 @@ Aula 5 - Usando propriedades
 Aula 6 - Metodos privados e estaticos
     -> Metodos privado
     -> Métodos de classe
+    -> Métodos estáticos
