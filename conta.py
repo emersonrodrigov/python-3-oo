@@ -31,3 +31,43 @@ class Conta:
     # Esse metodo deveria estar na classe de cliente e nao na cont
     # def eh_inadimplente(self, cliente):
     #     pass
+
+    # aula 5
+    # def get_saldo(self):
+    #     return self.__saldo
+
+    # aula 5
+    # def get_titular(self):
+    #     return self.__titular
+
+    # aula 5
+    # def get_limite(self):
+    #     return self.__limite
+
+    # Aula 6
+
+    # aula 5
+    # def set_limite(self, limite):
+    #     self.__limite = limite
+
+    #   Aula 6
+
+    @property
+    def saldo(self):
+        return self.__saldo
+
+    @property
+    def titular(self):
+        return self.__titular
+
+    @property
+    def limite(self):
+        return self.__limite
+
+    @limite.setter
+    def limite(self, limite):
+        self.__limite = limite
+
+    @property
+    def numero(self):
+        return self.__numero

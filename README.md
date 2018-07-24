@@ -20,7 +20,8 @@ Aula 4 - Encapsulamento
     -> Coesão
 
 Aula 5 - Usando propriedades
-    ->
+    -> Getters e Setters
+    -> Propriedades - @property
 
 Aula 6 - Metodos privados e estaticos
     ->
