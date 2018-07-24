@@ -24,4 +24,5 @@ Aula 5 - Usando propriedades
     -> Propriedades - @property
 
 Aula 6 - Metodos privados e estaticos
-    ->
+    -> Metodos privado
+    -> Métodos de classe

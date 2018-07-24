@@ -8,6 +8,7 @@ class Conta:
         self.__titular = titular
         self.__saldo = saldo
         self.__limite = limite
+        self.__codigo_banco = "001" # Aula 6
 
     # aula 3
     def extrato(self):
@@ -15,13 +16,19 @@ class Conta:
 
     # aula 3
     def deposita(self, valor):
-        print(f"Valor depositado {valor}")
         self.__saldo += valor
+
+    # Aula 6 - Metodos privado
+    def __pode_sacar(self,valor_a_sacar):
+        valor_disponivel_a_sacar = self.__saldo + self.__limite
+        return valor_a_sacar <= valor_disponivel_a_sacar
 
     # aula 3
     def saca(self, valor):
-        print(f"Valor sacado {valor}")
-        self.__saldo -= valor
+        if(self.__pode_sacar(valor)):    #Aula 6 -  Melhorndo o saca
+            self.__saldo -= valor
+        else:
+            print(f"O valor {valor} passou o limite")
 
     # aula 4 - Encapsulamento
     def transfere(self, valor,  conta_destino):
@@ -50,8 +57,7 @@ class Conta:
     # def set_limite(self, limite):
     #     self.__limite = limite
 
-    #   Aula 6
-
+    #   Aula 6 - Utilizando get e set
     @property
     def saldo(self):
         return self.__saldo
@@ -71,3 +77,12 @@ class Conta:
     @property
     def numero(self):
         return self.__numero
+
+
+    @staticmethod
+    def codigo_banco():
+        return '001'
+
+    @staticmethod
+    def codigos_bancos():
+        return {'BB': '001', 'Caixa': '104', 'Bradesco': '237'}
